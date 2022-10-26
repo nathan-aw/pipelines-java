@@ -1,4 +1,4 @@
-- task: UsePythonVersion@0
+- task: UsePythonVersion
   inputs:
     versionSpec: '3.8'
   displayName: 'Install Python 3.8'
