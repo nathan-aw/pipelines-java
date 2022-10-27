@@ -7,9 +7,9 @@ pool:
 steps:
 - task: Maven@3
   inputs:
-    versionSpec: '3.8'
-  displayName: 'Install Python 3.8'
- - script: pip install requests
+    versionSpec: '3.7'
+  displayName: 'Install Python 3.7'
+- script: pip install requests
   displayName: 'pip uninstall urllib3'
 - script: pip install requests
   displayName: 'Install request'
