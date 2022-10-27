@@ -9,7 +9,7 @@ steps:
   inputs:
     versionSpec: '3.7'
   displayName: 'Install Python 3.7'
-- script: pip install requests
+- script: pip uninstall urllib3
   displayName: 'pip uninstall urllib3'
 - script: pip install requests
   displayName: 'Install request'
