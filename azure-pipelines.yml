@@ -9,6 +9,8 @@ steps:
   inputs:
     versionSpec: '3.8'
   displayName: 'Install Python 3.8'
+- script: pip install requests
+  displayName: 'Install Checkov'
 - script: pip install checkov
   displayName: 'Install Checkov'
 - script: checkov -d . --bc-api-key 9bfab0b2-bd8d-41b5-91a3-13989a97ff6a::pgbj5rlUvU7Jl0R7nnucHc8ETh8= --repo-id nathan-aw/pipelines-java --branch main
