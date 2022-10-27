@@ -7,11 +7,9 @@ pool:
 steps:
 - task: Maven@3
   inputs:
-    versionSpec: '3.7'
-  displayName: 'Install Python 3.7'
-- script: pip uninstall urllib3
-  displayName: 'pip uninstall urllib3'
-- script: pip install requests
+    versionSpec: '3.8'
+  displayName: 'Install Python 3.8'
+- script: pip3 install --upgrade requests
   displayName: 'Install request'
 - script: pip install checkov
   displayName: 'Install Checkov'
