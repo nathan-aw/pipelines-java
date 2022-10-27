@@ -10,14 +10,12 @@ phases:
     runtime-versions:
       python: 3.7
     commands:
-       - aws ssm put-parameter --name bc-api-key --value 3cdd9520-15a2-4d6a-a583-df99d6e80379::Rwh/c7RxNqnugFcrbtECVzPZmIU= --type SecureString
        - pip3 install bridgecrew
        - echo Installing codebuild-extras...
        - curl -fsSL https://raw.githubusercontent.com/bridgecrewio/aws-codebuild-extras/master/install >> extras.sh
        - . ./extras.sh
   build:
     commands:
-       - aws ssm put-parameter --name bc-api-key --value 3cdd9520-15a2-4d6a-a583-df99d6e80379::Rwh/c7RxNqnugFcrbtECVzPZmIU= --type SecureString
        - bridgecrew -d . --bc-api-key $BC_API_KEY --repo-id $CODEBUILD_ACCOUNT_ID/$CODEBUILD_PROJECT --branch $CODEBUILD_GIT_BRANCH -s
        - bridgecrew -d . -o junitxml > test_results.xml
 reports:
