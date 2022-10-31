@@ -13,7 +13,7 @@ steps:
   displayName: 'Install request'
 - script: pip install checkov
   displayName: 'Install Checkov'
-- script: checkov -d . --bc-api-key e67db648-877a-4c33-b718-8863959917b2::VoqvvdJtGFDMFJRx8bViWzTw55s= --repo-id nathan-aw/pipelines-java --branch main
+- script: checkov -d . --bc-api-key ACCESS_KEY::ACCESS_SECRETS --repo-id nathan-aw/pipelines-java --branch main
   displayName: 'Scan with Prisma Cloud'
   env:
     PRISMA_API_URL: https://api.anz.prismacloud.io
